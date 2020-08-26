@@ -14,7 +14,6 @@ class App extends Component {
       todos = [];
     } else {
       todos = JSON.parse(localStorage.getItem("todos"));
-      console.log(todos);
     }
     this.state = {
       items: todos,
@@ -70,7 +69,6 @@ class App extends Component {
   };
 
   ClearList = () => {
-    console.log("Clear List");
     this.setState({
       items: [],
     });
@@ -81,10 +79,8 @@ class App extends Component {
     let todos;
     if (localStorage.getItem("todos") === null) {
       todos = [];
-      console.log("first block");
     } else {
       todos = JSON.parse(localStorage.getItem("todos"));
-      console.log("Second block");
     }
     todos.push(item);
     localStorage.setItem("todos", JSON.stringify(todos));

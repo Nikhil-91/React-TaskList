@@ -3,21 +3,9 @@ import Todoitems from "./TodoItems";
 
 export default class TodoList extends Component {
   render() {
-    const {
-      items,
-      handleDelete,
-      handleEdit,
-      clearList,
-      filterList,
-    } = this.props;
+    const { items, handleDelete, handleEdit, clearList } = this.props;
     return (
       <ul className="list-group my-5">
-        {/* <input
-          type="text"
-          placeholder="Filter Taks"
-          className="form-control my-2"
-          onChange={filterList}
-        /> */}
         <h3 className="text-center text-capitalize">Todo Items</h3>
         {items.map((item) => {
           return (
